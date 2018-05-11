@@ -13,8 +13,8 @@ class Square(object):
         self.y = y
         self.color = color
 
-    def draw(self):
-        screen = ev3.Screen()
+    def draw(self, screen):
+        # screen = ev3.Screen()
         x0 = DRAW_WIDTH * self.x
         y0 = DRAW_HEIGHT * self.y
         x1 = x0 + DRAW_WIDTH

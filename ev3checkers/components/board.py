@@ -31,7 +31,7 @@ class Board(object):
         screen = ev3.Screen()
         for w in range(WIDTH):
             for h in range(HEIGHT):
-                self.squares[w][h].draw()
+                self.squares[w][h].draw(screen)
 
         screen.update()
         time.sleep(5)
