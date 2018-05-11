@@ -1,5 +1,6 @@
 
 import time
+import ev3dev.ev3 as ev3
 from ev3checkers.components.square import Square
 
 WIDTH = 8
@@ -12,6 +13,7 @@ class Board(object):
     def __init__(self):
 
         self.current_color = COLORS[0]
+        self.screen = ev3.Screen()
 
         # Initialize Board
         self.squares = []
@@ -28,8 +30,8 @@ class Board(object):
         self.screen.clear()
         time.sleep(2)
         # for w in range(WIDTH):
-        for h in range(HEIGHT):
-            self.squares[0][h].draw()
+        # for h in range(HEIGHT):
+        self.squares[0][0].draw()
         self.screen.update()
         time.sleep(2)
 
