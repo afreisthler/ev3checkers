@@ -7,12 +7,12 @@ DRAW_HEIGHT = 15
 class Square(object):
 
 
-    def __init__(self, color, x, y):
+    def __init__(self, color, x, y, screen):
         self.checker = None
         self.x = x
         self.y = y
         self.color = color
-        self.screen = ev3.Screen()
+        self.screen = screen
 
     def draw(self):
         x0 = DRAW_WIDTH * self.x

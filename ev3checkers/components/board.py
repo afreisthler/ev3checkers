@@ -22,7 +22,7 @@ class Board(object):
 
         for w in range(WIDTH):
             for h in range(HEIGHT):
-                self.squares[w].append(Square(self.current_color, w, h))
+                self.squares[w].append(Square(self.current_color, w, h, screen))
                 self._switch_color()
             self._switch_color()
 
