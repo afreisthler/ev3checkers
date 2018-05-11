@@ -27,8 +27,8 @@ class Board(object):
             self._switch_color()
 
     def draw(self):
-        self.screen.clear()
-        time.sleep(2)
+        # self.screen.clear()
+        # time.sleep(2)
         # for w in range(WIDTH):
         # for h in range(HEIGHT):
         self.squares[0][0].draw()
