@@ -32,7 +32,7 @@ class Board(object):
         # for w in range(WIDTH):
         # for h in range(HEIGHT):
         self.squares[0][0].draw()
-        self.screen.update()
+
         time.sleep(2)
 
     def _switch_color(self):
