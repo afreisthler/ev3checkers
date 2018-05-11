@@ -24,3 +24,6 @@ if __name__ == "__main__":
     except:
         while True:
             pass
+
+    while True:
+        pass

@@ -26,15 +26,13 @@ class Board(object):
             self._switch_color()
 
     def draw(self):
-        # self.screen.clear()
-
         screen = ev3.Screen()
+        screen.clear()
         for w in range(WIDTH):
             for h in range(HEIGHT):
                 self.squares[w][h].draw(screen)
 
         screen.update()
-        time.sleep(5)
 
 
     def _switch_color(self):
