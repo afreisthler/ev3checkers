@@ -1,9 +1,10 @@
 
+import time
 from ev3checkers.components.square import Square
 
 WIDTH = 8
 HEIGHT = 8
-COLORS = ['W', 'B']
+COLORS = ['white', 'black']
 
 class Board(object):
 
@@ -24,7 +25,13 @@ class Board(object):
             self._switch_color()
 
     def draw(self):
-        self.squares[0][0].draw()
+        self.screen.clear()
+        time.sleep(2)
+        # for w in range(WIDTH):
+        for h in range(HEIGHT):
+            self.squares[0][h].draw()
+        self.screen.update()
+        time.sleep(2)
 
     def _switch_color(self):
         if self.current_color == COLORS[0]:
