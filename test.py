@@ -6,5 +6,5 @@ import time
 button = ev3.Button()
 while True:
     if button.up:
-        ev3.Sound.speak('Hello Turtle Robotics!').wait()
+        ev3.Sound.speak('Hello World!').wait()
         time.sleep(2)
