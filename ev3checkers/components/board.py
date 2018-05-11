@@ -10,8 +10,9 @@ COLORS = ['white', 'black']
 class Board(object):
 
 
-    def __init__(self):
+    def __init__(self, screen):
 
+        self.screen = screen
         self.current_color = COLORS[0]
 
         # Initialize Board
@@ -21,18 +22,14 @@ class Board(object):
 
         for w in range(WIDTH):
             for h in range(HEIGHT):
-                self.squares[w].append(Square(self.current_color, w, h))
+                self.squares[w].append(Square(self.screen, self.current_color, w, h))
                 self._switch_color()
             self._switch_color()
 
     def draw(self):
-        screen = ev3.Screen()
-        screen.clear()
         for w in range(WIDTH):
             for h in range(HEIGHT):
-                self.squares[w][h].draw(screen)
-
-        screen.update()
+                self.squares[w][h].draw()
 
 
     def _switch_color(self):
