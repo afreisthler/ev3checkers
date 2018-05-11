@@ -8,7 +8,7 @@ class Game(object):
 
     def __init__(self):
         board = Board()
-        board.draw()
+        # board.draw()
 
 # This is the entry point for a call from skynet, launched through scheduler and func
 if __name__ == "__main__":
