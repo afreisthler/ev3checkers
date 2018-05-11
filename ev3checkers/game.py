@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 
+import logging
 import ev3dev.ev3 as ev3
 from ev3checkers.components.board import Board
 
@@ -8,8 +9,9 @@ class Game(object):
 
 
     def __init__(self):
+        logging.debug('Creating Game')
         board = Board()
-        # board.draw()
+        board.draw()
 
 # This is the entry point for a call from skynet, launched through scheduler and func
 if __name__ == "__main__":
