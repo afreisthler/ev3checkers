@@ -5,7 +5,7 @@ from ev3checkers.components.square import Square
 
 WIDTH = 8
 HEIGHT = 8
-COLORS = ['white', 'black']
+COLORS = ['white', 'lightgray']
 
 class Board(object):
 
