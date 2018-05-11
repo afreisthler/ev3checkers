@@ -27,10 +27,10 @@ class Board(object):
 
     def draw(self):
         # self.screen.clear()
-        # time.sleep(2)
-        # for w in range(WIDTH):
-        # for h in range(HEIGHT):
-        self.squares[0][0].draw()
+
+        for w in range(WIDTH):
+            for h in range(HEIGHT):
+                self.squares[w][h].draw()
 
 
     def _switch_color(self):
