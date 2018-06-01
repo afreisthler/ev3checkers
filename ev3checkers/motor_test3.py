@@ -12,7 +12,7 @@ direction = -1
 
 for i in range(7):
     for i in range(7):
-        m3.run_to_rel_pos(position_sp=-BLOCK_ROTATIONS, speed_sp=150, stop_action="hold")
+        m3.run_to_rel_pos(position_sp=direction * BLOCK_ROTATIONS, speed_sp=150, stop_action="hold")
         sleep(1)
     direction = direction * -1
     m1.run_to_rel_pos(position_sp=-110, speed_sp=150, stop_action="hold")
